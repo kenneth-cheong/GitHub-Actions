@@ -1,24 +1,11 @@
-#!pip install twython
-
 import json
 from twython import Twython
 import pandas as pd
 import datetime
 
-# Enter your keys/secrets as strings in the following fields
-#credentials = {}  
-#credentials['CONSUMER_KEY'] = "" 
-#credentials['CONSUMER_SECRET'] = "" 
-#credentials['ACCESS_TOKEN'] = ""  
-#credentials['ACCESS_SECRET'] = ""
-
-# Save the credentials object to file
-#with open("twitter_credentials.json", "w") as file:  
-#    json.dump(credentials, file)
-
 
 # Load credentials from json file
-with open("twitter_credentials.json", "r") as file:  
+with open("./twitter_credentials.json", "r") as file:  
     creds = json.load(file)
 
 # Instantiate an object
