@@ -26,3 +26,11 @@ jobs:
           - name: execute py script # run the run.py to get the latest data
             run: |
               python collect_tweets.py
+          - name: 🚀 Commit and push if it changed
+            run: |
+              git config user.name "${GITHUB_ACTOR}"
+              git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+              git add -A
+              timestamp=$(date -u)
+              git commit -m "Latest data: ${timestamp}" || exit 0
+              git push
