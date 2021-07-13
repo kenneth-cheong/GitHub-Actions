@@ -25,4 +25,4 @@ jobs:
               pip install pandas
           - name: execute py script # run the run.py to get the latest data
             run: |
-              python ./scripts/collect_tweets.py
+              python collect_tweets.py
