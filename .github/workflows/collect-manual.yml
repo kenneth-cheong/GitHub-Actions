@@ -23,7 +23,7 @@ jobs:
             run: |
               pip install twython
               pip install pandas
-              pip install os
+              pip install path
           - name: execute py script # run the run.py to get the latest data
             env: 
                 CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
