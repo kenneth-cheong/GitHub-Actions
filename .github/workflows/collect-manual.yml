@@ -19,14 +19,14 @@ jobs:
             uses: actions/checkout@v2 # checkout the repository content to github runner.
           - name: setup python
             uses: actions/setup-python@v2
-            with: 
-                consumer_key: ${{ secrets.CONSUMER_KEY }}
-                consumer_secret: ${{ secrets.CONSUMER_SECRET }}
           - name: setup dependencies
             run: |
               pip install twython
               pip install pandas
           - name: execute py script # run the run.py to get the latest data
+            env: 
+                CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+                CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
             run: |
               python collect_tweets.py
           - name: Commit and push if it changed
