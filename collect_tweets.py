@@ -4,11 +4,6 @@ import pandas as pd
 import datetime
 import os
 
-
-# Load credentials from json file
-#with open("./twitter_credentials.json", "r") as file:  
-    #creds = json.load(file)
-
 consumer_key = os.environ['CONSUMER_KEY']
 consumer_secret = os.environ['CONSUMER_SECRET']
                           
@@ -37,7 +32,3 @@ df = pd.DataFrame(dict_)
 current_date = datetime.datetime.now()
 filename = str(current_date.day)+str(current_date.month)+str(current_date.year)
 df.to_csv(str(filename + '.csv'))
-
-#scraped_twitter.drop_duplicates(keep='first', inplace=True)
-
-#scraped_twitter.to_csv("scraped_twitter.csv")
