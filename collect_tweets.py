@@ -2,6 +2,7 @@ import json
 from twython import Twython
 import pandas as pd
 import datetime
+import os
 
 
 # Load credentials from json file
