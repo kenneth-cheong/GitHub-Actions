@@ -9,7 +9,7 @@ import datetime
     #creds = json.load(file)
 
 consumer_key = os.environ['CONSUMER_KEY']
-consumer_secret = os.environ{'CONSUMER_SECRET']
+consumer_secret = os.environ['CONSUMER_SECRET']
                           
     
 # Instantiate an object
