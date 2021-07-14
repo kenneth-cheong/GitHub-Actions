@@ -24,7 +24,11 @@ jobs:
             run: |
               pip install twython
               pip install pandas
+              pip install path
           - name: execute py script # run the run.py to get the latest data
+            env: 
+                CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+                CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
             run: |
               python collect_tweets.py
           - name: Commit and push if it changed
