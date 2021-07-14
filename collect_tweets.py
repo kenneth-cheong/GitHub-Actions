@@ -5,11 +5,15 @@ import datetime
 
 
 # Load credentials from json file
-with open("./twitter_credentials.json", "r") as file:  
-    creds = json.load(file)
+#with open("./twitter_credentials.json", "r") as file:  
+    #creds = json.load(file)
 
+consumer_key = os.environ['CONSUMER_KEY']
+consumer_secret = os.environ{'CONSUMER_SECRET']
+                          
+    
 # Instantiate an object
-python_tweets = Twython(creds['CONSUMER_KEY'], creds['CONSUMER_SECRET'])
+python_tweets = Twython(consumer_key, consumer_secret)
 
 # Create query
 query = {'q': 'united airlines',  
