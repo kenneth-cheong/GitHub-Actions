@@ -30,5 +30,5 @@ for status in python_tweets.search(**query)['statuses']:
 # Structure data in a pandas DataFrame for easier manipulation
 df = pd.DataFrame(dict_)  
 current_date = datetime.datetime.now()
-filename = str(current_date.day)+str(current_date.month)+str(current_date.year)
+filename = str(current_date)
 df.to_csv(str(filename + '.csv'))
