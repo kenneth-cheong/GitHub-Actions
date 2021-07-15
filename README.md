@@ -38,7 +38,8 @@ Secondly, Twython has a restriction of obtaining up to 100 tweets per query thus
               python collect_tweets.py
 ```
 ### Python .py script
-```consumer_key = os.environ['CONSUMER_KEY']
+```
+consumer_key = os.environ['CONSUMER_KEY']
 consumer_secret = os.environ['CONSUMER_SECRET']
                           
     
