@@ -13,7 +13,7 @@ python_tweets = Twython(consumer_key, consumer_secret)
 
 # Create query
 query = {'q': 'united airlines',  
-        'result_type': 'recent',
+        'result_type': 'mixed',
         'count': 100,
         'lang': 'en',
         }
