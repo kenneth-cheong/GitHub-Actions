@@ -37,4 +37,4 @@ jobs:
               git add -A
               timestamp=$(date -u)
               git commit -m "Latest data: ${timestamp} (manual)" 
-              git push "https://${GITHUB_ACTOR}:${TOKEN}@github.com/${GITHUB_REPOSITORY}/scraped_data.git" HEAD:main || exit 0
+              git push "https://${GITHUB_ACTOR}:${TOKEN}@github.com/${GITHUB_REPOSITORY}/tree/main/scraped_data.git" HEAD:main || exit 0
