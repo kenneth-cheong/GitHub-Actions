@@ -21,7 +21,6 @@ jobs:
             uses: actions/setup-python@v2
           - name: setup dependencies
             run: |
-              pip install glob
               pip install pandas
           - name: execute py script # run the run.py to get the latest data
             env: 
