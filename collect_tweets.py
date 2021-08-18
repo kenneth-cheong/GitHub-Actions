@@ -31,4 +31,4 @@ for status in python_tweets.search(**query)['statuses']:
 df = pd.DataFrame(dict_)  
 current_date = datetime.datetime.now()
 filename = str(current_date)
-df.to_csv(str(filename + '.csv'))
+df.to_csv(str(filename + '.csv'),index=False)
