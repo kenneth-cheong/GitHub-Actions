@@ -12,4 +12,4 @@ df.drop_duplicates(subset=['text'],inplace=True, ignore_index=True)
 current_date = datetime.datetime.now()
 filename = str(current_date)
 
-df.to_csv(str(filename + '_combined.csv'))
+df.to_csv(str(filename + '_combined.csv'),index=False)
